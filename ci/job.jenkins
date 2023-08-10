@@ -2,10 +2,13 @@
 pipeline {
   agent any
   stages {
-    stage('Stage 1') {
+    stage('Hello World! :-))') {
       steps {
         echo 'Hello world!'
       }
     }
+    stage('Build') {
+        git url: 'https://github.com/EvgenyVerevkin/surf.git', branch: 'main', credentialsId: '4b338890-ce1b-4ba2-acc3-59675141bc52'
+      }
   }
 }
