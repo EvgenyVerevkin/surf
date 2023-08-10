@@ -14,7 +14,8 @@ pipeline {
         //make file and add data to file
         script {
           def date = new Date()
-          writeFile(file: 'job.log', text: 'date.format("yyMMddHHmm") - PRjob executed')
+          def data = date.format("yyMMddHHmm") + " - PRjob executed"
+          writeFile(file: 'job.log', text: data)
           sh 'ls -l'
           sh 'cat job.log'
         }
