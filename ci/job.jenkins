@@ -13,9 +13,9 @@ pipeline {
         git url: 'https://github.com/EvgenyVerevkin/surf.git', branch: 'main', credentialsId: '4b338890-ce1b-4ba2-acc3-59675141bc52'
         //make file and add data to file
         script {
-          def date = new Date
-          writeFile file: 'job.log', text: 'date.format("yyMMddHHmm") - PRjob executed'
-          sh 'ls -l job.log'
+          def date = new Date()
+          writeFile(file: 'job.log', text: 'date.format("yyMMddHHmm") - PRjob executed')
+          sh 'ls -l'
           sh 'cat job.log'
         }
         //commit
