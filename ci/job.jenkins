@@ -32,9 +32,9 @@ pipeline {
   }
   post {
     always{
-                emailext to: "ait.nvkz@yandex.ru",
-                subject: "Jenkins pipeline execution result",
-                body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}\n Repo link: https://github.com/EvgenyVerevkin/surf.git"
-            }
+      emailext to: "ait.nvkz@yandex.ru",
+      subject: "Jenkins pipeline execution result",
+      body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}\n Repo link: https://github.com/EvgenyVerevkin/surf.git"
+    }
   }
 }
